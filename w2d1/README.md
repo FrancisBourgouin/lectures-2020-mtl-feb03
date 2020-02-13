@@ -2,7 +2,7 @@
 
 ## Automated Testing
 
-- Save time compared to manuel testing
+- Save time compared to manual testing
 - Easy to see if new changes to our code is breaking anything
 - Could be integrated into build workflow
 - Think about potential bugs up-front
@@ -17,7 +17,7 @@
 
 3. Refactor the code. Clean up the code to make it more readable and maintainable.
 
-## BDD - Behaviour Drive Development
+## BDD - Behaviour Driven Development
 
 - Describes the behavior of the system from the customer’s point of view
 
