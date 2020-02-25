@@ -1,0 +1,49 @@
+Initial setup
+
+Hey, can I get the urls ?
+GET  /urls
+  Display all urls
+
+
+Hey, can I get the urls, but more specifically, the one I named *blank* (Referenced as :shortURL)
+GET  /urls/:shortURL
+  (Finds the :shortURL in urls)
+  Display an url
+
+
+Secure setup
+
+Hey, can I get the urls that are mine ?
+GET  /urls
+  Fetch the user id from a cookie if it exists
+  Filter every url in urlDatabase with the id of the user
+  Display all of those urls
+
+
+Hey, can I get the urls, but more specifically, the one I named *blank* (Referenced as :shortURL)
+GET  /urls/:shortURL
+  Fetch the user id from a cookie if it exists
+  Make sure that the user id matches with the id of the specified shorturl
+  (Finds the :shortURL in urls)
+  Display an url
+
+  Available data:
+  'shortURL':{longurl:'....', userId:'...'}
+  req.cookies['userId']
+
+
+/// URL STRUCTURE
+
+INPUT => urlDatabase = {
+            's1':'....',
+            's2':'....',
+            's3':'....',
+            's4':'....'
+          }
+
+MECHANIC
+
+OUTPUT => filteredVersion = {
+            's2':'...',
+            's3':'....'
+          }
